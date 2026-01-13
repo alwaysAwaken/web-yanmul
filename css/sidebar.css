@@ -1,0 +1,16 @@
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: flex;
+        transition: ease-in-out 1s;
+    }
+    
+    .menu-toggle.onclick {
+        transform : rotate(180deg)
+    }
+
+    
+}

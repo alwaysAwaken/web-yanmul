@@ -1,0 +1,23 @@
+.next-button {
+    height: 100%;
+    padding: 0 12px;
+    text-decoration: none;
+    
+    margin: 50px auto;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next-button a {
+    text-decoration: none;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;    
+}
+    
+    
