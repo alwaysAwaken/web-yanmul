@@ -1,23 +1,68 @@
 .next-button {
-    height: 100%;
-    padding: 0 12px;
-    text-decoration: none;
-    
-    margin: 50px auto;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    
+    --border-radius: 1rem;
+    --bg-color: #393e41;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    min-width: fit-content;
+    width: 20%;
+    margin: 20px auto;
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+    color: #fff;
+    padding: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    isolation: isolate;
+    overflow: hidden;
+    transition: 2s ease;
 }
 
+.next-button::before,
+.next-button::after {
+    content: '';
+    position: absolute;
+}
+
+.next-button::before {
+    width: 200%;
+    aspect-ratio: 1 / 1;
+    background: conic-gradient(
+        #ffc400, #249ef0, #f0f0f0, #f57d1f);
+    z-index: -2;
+    animation: borderanimation 4s linear infinite;
+    filter: blur(20px);
+    
+}
+
+
+@keyframes borderanimation {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.next-button::after {
+    --inset: 2px;
+    background: #111;
+    inset: var(--inset);
+    border-radius: calc(var(--border-radius) - var(--inset));
+    background-size: 200% 100%;
+    animation: bg-scroll 1s linear infinite;
+    z-index: -1;
+    transition: all 0.3s linear;
+}
+.next-button:hover::after{
+    background: var(--bg-color);
+}
 .next-button a {
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1em;
     color: #fff;
-    cursor: pointer;    
+    cursor: pointer;   
+    text-align: center;
+    color: var(--color);
 }
     
     
