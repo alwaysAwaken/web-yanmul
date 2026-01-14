@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: minmax(300px, 60%) 1fr;
     width: 100%;
-    height: clamp(400px, 50vw, 750px);
+    height: clamp(400px, 30vw, 750px);
     position: relative;
 }
 .hero-bg {
