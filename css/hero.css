@@ -1,0 +1,43 @@
+@keyframes heroEnter {
+    from {opacity: 0; transform: translateX(-100px);}
+    to {opacity: 1; transform: translateX(0);}
+}
+.hero {
+    display: grid;
+    grid-template-columns: minmax(300px, 60%) 1fr;
+    width: 100%;
+    height: clamp(400px, 50vw, 750px);
+    position: relative;
+}
+.hero-bg {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    overflow: hidden;
+}
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-text {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 60px;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,1),
+        rgba(0,0,0,0.75)
+    );
+    animation: heroEnter 0.8s ease forwards;
+}
+.hero-text h1 {
+    font-size: clamp(24px, 4vw, 42px);
+}
+.hero-text p {
+    font-size: clamp(16px, 2vw, 30px);
+}

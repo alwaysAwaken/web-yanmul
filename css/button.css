@@ -8,7 +8,7 @@
     flex-direction: column;
     min-width: fit-content;
     width: 20%;
-    margin: 20px auto;
+    margin: 50px auto;
     background: var(--bg-color);
     border-radius: var(--border-radius);
     color: #fff;
@@ -16,7 +16,7 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     isolation: isolate;
     overflow: hidden;
-    transition: 2s ease;
+    transition: 1s ease;
 }
 
 .next-button::before,
@@ -32,8 +32,10 @@
         #ffc400, #249ef0, #f0f0f0, #f57d1f);
     z-index: -2;
     animation: borderanimation 4s linear infinite;
-    filter: blur(20px);
-    
+    filter: 
+        blur(30px)
+        saturate(2);
+    opacity: 0.9;
 }
 
 
@@ -55,6 +57,10 @@
 }
 .next-button:hover::after{
     background: var(--bg-color);
+}
+.next-button:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 5px 30px rgba(120,240,240,0.4);
 }
 .next-button a {
     text-decoration: none;

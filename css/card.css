@@ -24,8 +24,8 @@
     padding: 10px;
     border-radius: var(--border-radius);
     justify-self: center;
+    transition: 0.5s ease;
     background: transparent;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .card::before {
     content: "";
@@ -57,7 +57,6 @@
     );
 
     z-index: -1;
-    transition: background 0.3s ease;
 }
 .card svg {
     position: relative;
@@ -77,6 +76,10 @@
 .card p {
     text-align: center;
     font-size: clamp(10px, 1vw, 30px);
+}
+.card:hover{
+    box-shadow: 0 20px 20px var(--color);
+    transform: scale(1.1);
 }
 .card:hover::before{
     animation-play-state: running;

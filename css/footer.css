@@ -27,7 +27,7 @@
 
 .maps {
     text-align: center;
-    background: #232327;
+    background: #101012;
     padding: 20px;
 }
 
@@ -38,6 +38,12 @@
 .maps iframe {
     margin: 15px;
     
+}
+
+footer {
+    height: fit-content;
+    padding: 20px;
+    background: black;
 }
 
 @media (max-width: 800px) {
