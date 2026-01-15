@@ -8,15 +8,17 @@
     flex-direction: column;
     min-width: fit-content;
     width: 20%;
+    height: 3rem;
     margin: 50px auto;
     background: var(--bg-color);
     border-radius: var(--border-radius);
     color: #fff;
-    padding: 15px;
+    padding: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     isolation: isolate;
     overflow: hidden;
-    transition: 1s ease;
+    transition: 0.3s ease;
+    opacity: 1;
 }
 
 .next-button::before,
@@ -62,7 +64,12 @@
     transform: scale(1.05);
     box-shadow: 5px 5px 30px rgba(120,240,240,0.4);
 }
-.next-button a {
+.next-button a{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     text-decoration: none;
     font-size: 1em;
     color: #fff;
